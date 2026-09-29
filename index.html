@@ -23,14 +23,14 @@
     <div id="root"></div>
     <div id="boot-veil">
       <style>
-        #boot-veil{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#0a0a0a;font-family:system-ui,sans-serif}
-        #boot-veil .boot-brand{display:flex;align-items:center;gap:10px;letter-spacing:.3em;font-size:13px;font-weight:700;color:#f5f1e8}
-        #boot-veil .boot-ring{width:44px;height:44px;border-radius:50%;border:3px solid rgba(233,181,88,.2);border-top-color:#e9b558;animation:bootspin 1s linear infinite}
+        #boot-veil{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#05070d;font-family:Sora,sans-serif}
+        #boot-veil .boot-brand{display:flex;align-items:center;gap:10px;letter-spacing:.3em;font-size:13px;font-weight:700;color:#fffaf1}
+        #boot-veil .boot-ring{width:44px;height:44px;border-radius:50%;border:3px solid rgba(255,207,112,.2);border-top-color:#ffcf70;animation:bootspin 1s linear infinite}
         @keyframes bootspin{to{transform:rotate(360deg)}}
-        #boot-veil .boot-msg{font-size:12px;letter-spacing:.12em;color:rgba(245,241,232,.55)}
+        #boot-veil .boot-msg{font-size:12px;letter-spacing:.12em;color:rgba(255,250,241,.65)}
       </style>
       <div class="boot-brand">
-        <svg width="26" height="26" viewBox="0 0 32 32"><path d="M16 3l9 3.4V13c0 5.6-3.9 9.6-9 12.4C10.9 22.6 7 18.6 7 13V6.4L16 3z" fill="#e9b558"/><path d="M13.2 15.6l2.6 2.6 4.9-5.2" stroke="#0a0a0a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="26" height="26" viewBox="0 0 32 32"><path d="M16 3l9 3.4V13c0 5.6-3.9 9.6-9 12.4C10.9 22.6 7 18.6 7 13V6.4L16 3z" fill="#ffcf70"/><path d="M13.2 15.6l2.6 2.6 4.9-5.2" stroke="#251b3f" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         HANDYTRUST
       </div>
       <div class="boot-ring"></div>
@@ -39,6 +39,6 @@
         setTimeout(function(){var v=document.getElementById('boot-veil');if(v){var m=v.querySelector('.boot-msg');if(m)m.textContent='Taking longer than expected — please check your connection and refresh.';}},15000);
       </script>
     </div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
