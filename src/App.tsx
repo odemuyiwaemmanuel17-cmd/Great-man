@@ -1,50 +1,32 @@
-import { Component, type ErrorInfo, type ReactNode } from 'react';
-import ThreeScene from './components/ThreeScene';
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-}
-
-interface ErrorBoundaryState {
-  error: Error | null;
-}
-
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  state: ErrorBoundaryState = { error: null };
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { error };
-  }
-
-  componentDidCatch(_error: Error, _info: ErrorInfo) {
-    document.getElementById('boot-veil')?.remove();
-  }
-
-  render() {
-    if (this.state.error) {
-      return (
-        <main className="error-state">
-          <div>
-            <span>HANDYTRUST</span>
-            <h1>The 3D workshop could not start.</h1>
-            <p>Try an up-to-date browser with hardware acceleration enabled.</p>
-            <button type="button" onClick={() => window.location.reload()}>
-              Reload experience
-            </button>
-          </div>
-        </main>
-      );
-    }
-    return this.props.children;
-  }
-}
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollyExperience from './components/ScrollyExperience';
+import BookingModal from './components/BookingModal';
+import { FinalCTA, HowItWorks, ServicesGrid } from './components/Sections';
+import { BookingProvider } from './context/BookingContext';
 
 export default function App() {
   return (
-    <ErrorBoundary>
-      <main id="top">
-        <ThreeScene />
+    <BookingProvider>
+      <a
+        href="#experience"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[200] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary-foreground"
+      >
+        Skip to the escrow timeline
+      </a>
+
+      <Navbar />
+
+      <main>
+        <ScrollyExperience />
+        <HowItWorks />
+        <ServicesGrid />
+        <FinalCTA />
       </main>
-    </ErrorBoundary>
+
+      <Footer />
+
+      <BookingModal />
+    </BookingProvider>
   );
 }

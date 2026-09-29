@@ -4,41 +4,19 @@
     <meta charset="UTF-8" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Cpath d='M16 5l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V8l8-3z' fill='%23e9b558'/%3E%3Cpath d='M13.5 15.5l2.5 2.5 4.7-5' stroke='%230a0a0a' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23edae3b'/%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.1-3.1c.32-.32.86-.22.98.22a6 6 0 0 1-8.26 7.05l-7.91 7.91a1 1 0 0 1-3-3l7.91-7.91a6 6 0 0 1 7.06-8.26c.44.12.54.66.22.99z' fill='none' stroke='%232b2417' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HandyTrust — Fix it now. Pay when it's done.</title>
     <meta
       name="description"
-      content="HandyTrust is an escrow-backed home maintenance platform. Verified plumbers, electricians, AC and solar professionals across Nigeria. Pay only when the work is done."
+      content="HandyTrust is the escrow-backed home maintenance platform. Verified artisans fix your plumbing, AC, electrical and solar — and get paid only when you approve the work."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Sora:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="theme-color" content="#242b3d" />
+    <link rel="preload" as="image" href="/scenes/hero-1376.webp" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>
-    <div id="boot-veil">
-      <style>
-        #boot-veil{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#05070d;font-family:Sora,sans-serif}
-        #boot-veil .boot-brand{display:flex;align-items:center;gap:10px;letter-spacing:.3em;font-size:13px;font-weight:700;color:#fffaf1}
-        #boot-veil .boot-ring{width:44px;height:44px;border-radius:50%;border:3px solid rgba(255,207,112,.2);border-top-color:#ffcf70;animation:bootspin 1s linear infinite}
-        @keyframes bootspin{to{transform:rotate(360deg)}}
-        #boot-veil .boot-msg{font-size:12px;letter-spacing:.12em;color:rgba(255,250,241,.65)}
-      </style>
-      <div class="boot-brand">
-        <svg width="26" height="26" viewBox="0 0 32 32"><path d="M16 3l9 3.4V13c0 5.6-3.9 9.6-9 12.4C10.9 22.6 7 18.6 7 13V6.4L16 3z" fill="#ffcf70"/><path d="M13.2 15.6l2.6 2.6 4.9-5.2" stroke="#251b3f" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        HANDYTRUST
-      </div>
-      <div class="boot-ring"></div>
-      <div class="boot-msg">Preparing your home…</div>
-      <script>
-        setTimeout(function(){var v=document.getElementById('boot-veil');if(v){var m=v.querySelector('.boot-msg');if(m)m.textContent='Taking longer than expected — please check your connection and refresh.';}},15000);
-      </script>
-    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

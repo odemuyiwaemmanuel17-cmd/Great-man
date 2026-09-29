@@ -1,9 +1,9 @@
 {
   "name": "handytrust",
   "private": true,
-  "version": "1.0.1",
+  "version": "2.0.0",
   "type": "module",
-  "description": "HandyTrust — escrow-backed home maintenance platform as an interactive 3D scrollytelling experience.",
+  "description": "HandyTrust — escrow-backed home maintenance platform, rebuilt as a cinematic scroll experience.",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
@@ -11,11 +11,8 @@
     "preview": "vite preview --host 0.0.0.0 --port 4173"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.9",
-    "@react-three/fiber": "^9.8.1",
     "react": "^19.3.0",
-    "react-dom": "^19.3.0",
-    "three": "^0.160.0"
+    "react-dom": "^19.3.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
